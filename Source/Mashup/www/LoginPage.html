@@ -54,6 +54,7 @@
                 'into Facebook.';
         }
     }
+
 // This function is called when someone finishes with the Login
 // Button.  See the onlogin handler attached to it in the sample
 // code below.
@@ -62,6 +63,7 @@ function checkLoginState() {
         statusChangeCallback(response);
     });
 }
+
 window.fbAsyncInit = function() {
     FB.init({
         appId      : '1391919187525129',
@@ -81,9 +83,11 @@ window.fbAsyncInit = function() {
     //    your app or not.
     //
     // These three cases are handled in the callback function.
+
     FB.getLoginStatus(function(response) {
         statusChangeCallback(response);
     });
+
 };
 (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -92,6 +96,7 @@ window.fbAsyncInit = function() {
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1391919187525129";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
 // Load the SDK asynchronously
 (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -100,6 +105,7 @@ window.fbAsyncInit = function() {
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
 // Here we run a very simple test of the Graph API after login is
 // successful.  See statusChangeCallback() for when this call is made.
 function testAPI() {
